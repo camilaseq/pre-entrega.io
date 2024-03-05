@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white; /* Cambiado a blanco */
+}
+
+.navbar {
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    max-width: 50px;
+    height: auto;
+}
+
+.navbar-nav {
+    justify-content: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease; /* Añadir una transición para el transform */
+}
+
+.container img:hover {
+    transform: scale(1.1); /* Hacer la imagen un poco más grande */
+}
