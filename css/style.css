@@ -1,0 +1,136 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+body header {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+body nav {
+  background-color: black;
+  padding: 10px;
+}
+body nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+body nav ul li {
+  margin-right: 20px;
+  position: relative;
+}
+body nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: block;
+}
+body nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+}
+body nav ul li ul li {
+  width: 200px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+body nav ul li ul li ul {
+  position: relative;
+  top: -60px;
+  left: 200px;
+}
+body nav ul li:hover > ul {
+  display: inherit;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: black;
+}
+.container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  transition: opacity 0.5s ease;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+.container img:hover {
+  transform: scale(1.1);
+}
+
+.text-container {
+  text-align: center;
+}
+.text-container .text-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.text-container .text-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.text-container .text-content p {
+  line-height: 1.5;
+}
+
+@keyframes changeImage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.image {
+  opacity: 1;
+  animation: changeImage 5s infinite alternate;
+}
+.image:nth-child(1) {
+  animation-delay: 0s;
+}
+.image:nth-child(2) {
+  animation-delay: 5s;
+}
+.image:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.navbar {
+  background-color: #000000;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-brand img {
+  max-width: 50px;
+  height: auto;
+}
+.navbar .navbar-nav {
+  justify-content: center;
+}
+.navbar .navbar-nav .nav-item {
+  margin-right: 20px;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: white !important;
+}
+
+/*# sourceMappingURL=style.css.map */
