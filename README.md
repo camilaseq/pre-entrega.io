@@ -1,4 +1,4 @@
-# pre-entrega2
+# Entrega final
 # Vipeluquería's - Sitio Web Oficial
 
 Este repositorio contiene el código fuente del sitio web oficial de Vipeluquería's, una cadena de peluquerías líder en Argentina. El sitio web proporciona información sobre los servicios ofrecidos, precios, información sobre la empresa y más.
