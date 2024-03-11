@@ -1,161 +1,351 @@
-// Variables
 $background-color: black;
 $text-color: white;
 
-// Estilos
 body {
-    font-family: 'Arial', sans-serif;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+header {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+
+  ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: $background-color;
-    color: $text-color;
+    display: flex;
+    justify-content: center;
 
+    li {
+      margin-right: 20px;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+
+        li {
+          width: 200px;
+          float: none;
+          display: list-item;
+          position: relative;
+
+          ul {
+            position: relative;
+            top: -60px;
+            left: 200px;
+          }
+        }
+      }
+
+      &:hover > ul {
+        display: inherit;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: $background-color;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.text-container {
+  text-align: center;
+
+  .text-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  }
+}
+
+@keyframes changeImage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.image {
+  opacity: 1;
+  animation: changeImage 5s infinite alternate;
+
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 5s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 10s;
+  }
+}
+
+.navbar {
+  background-color: #000000;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand img {
+  max-width: 50px;
+  height: auto;
+}
+
+.navbar .navbar-nav {
+  justify-content: center;
+
+  .nav-item {
+    margin-right: 20px;
+
+    .nav-link {
+      color: white !important;
+    }
+  }
+}
+
+// Estilos específicos para precios.html
+.precios-page {
     header {
         background-color: #000000;
         color: #fff;
         padding: 10px;
         text-align: center;
+      }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: $background-color;
     }
 
-    nav {
-        background-color: black;
-        padding: 10px;
+    #precios {
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+        table {
+            width: 100%;
+            border-collapse: collapse;
 
-            li {
-                margin-right: 20px;
-                position: relative;
+            th, td {
+                padding: 10px;
+                border: 1px solid $text-color;
+                text-align: left;
+            }
 
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                    padding: 10px;
-                    display: block;
-                }
+            th {
+                background-color: #333;
+                color: rgb(0, 0, 0);
+            }
 
-                ul {
-                    display: none;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    background-color: #333;
+            tr:nth-child(even) {
+                background-color: #000000;
+            }
 
-                    li {
-                        width: 200px;
-                        float: none;
-                        display: list-item;
-                        position: relative;
-
-                        ul {
-                            position: relative;
-                            top: -60px;
-                            left: 200px;
-                        }
-                    }
-                }
-
-                &:hover > ul {
-                    display: inherit;
-                }
+            tr:hover {
+                background-color: #ddd;
             }
         }
     }
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: $background-color;
-
-    img {
+.sobrenosotros-page {
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: $background-color;
+      }
+      
+      .content {
+        display: flex;
+        align-items: center; 
+      }
+      
+      .image-container {
+        flex: 0 0 auto; 
+        margin-right: 20px; 
+      }
+      
+      .image-container img {
         max-width: 100%;
         height: auto;
-        margin-bottom: 20px;
-        transition: opacity 0.5s ease;
         border-radius: 10px;
         object-fit: cover;
         object-position: center;
-
+        transition: opacity 0.5s ease;
+      
         &:hover {
-            transform: scale(1.1);
+          transform: scale(1.1);
         }
-    }
+      }
+      
+      .text {
+        flex: 1; // El texto ocupará todo el espacio restante
+      }
+      
+      .text h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      
+      .text p {
+        line-height: 1.5;
+      }
+      
 }
 
-.text-container {
-    text-align: center;
+.salones-page {
+    .container {
+        .img {
+          width: 200px; /* Ancho deseado para el logo */
+          height: 100px; /* Altura deseada para el logo */
+          display: block; /* Hacer que el logo sea un elemento de bloque */
+          margin: 0 auto; /* Centrar horizontalmente el logo */
+        }
+      
+        nav {
+          ul {
+            list-style-type: none; /* Quitar viñetas de la lista */
+            margin: 0; /* Quitar márgenes */
+            padding: 0; /* Quitar relleno */
+            text-align: center; /* Centrar los elementos del menú */
+            background-color: #000000; /* Color de fondo del menú */
+            overflow: hidden; /* Evitar que los elementos floten fuera del contenedor */
+            
+            li {
+              display: inline-block; /* Hacer que los elementos del menú se muestren en línea */
+              
+              a {
+                display: block; /* Hacer que los enlaces sean elementos de bloque */
+                color: white; /* Color del texto del menú */
+                padding: 14px 16px; /* Espaciado interno del menú */
+                text-decoration: none; /* Quitar subrayado de los enlaces */
+              }
+            }
+          }
+        }
+      
+        #map-container {
+          #map {
+            .location-info {
+              img {
+                width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+                height: auto; /* Se ajusta automáticamente la altura */
+              }
+      
+              p {
+                color: white; /* Color de texto blanco */
+              }
+            }
+          }
+        }
+      }
+      
+      header {
+        background-color: transparent; /* Hacer el fondo del encabezado transparente */
+        text-align: center; /* Centrar el contenido del encabezado */
+      
+        img {
+          width: 200px; /* Ancho deseado para el logo */
+          height: 100px; /* Altura deseada para el logo */
+          margin-top: 50px; /* Espacio superior para el logo */
+        }
+      }
+      
+// Estilo mobile
+@media (max-width: 768px) {
+  body {
+    header {
+      padding: 5px;
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    nav {
+      padding: 5px;
+
+      ul {
+        li {
+          margin-right: 10px;
+
+          .nav-link {
+            padding: 5px;
+          }
+        }
+      }
+    }
 
     .text-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+      }
 
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.5;
-        }
+      p {
+        font-size: 0.9em;
+        line-height: 1.3;
+      }
     }
+  }
 }
-
-@keyframes changeImage {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.image {
-    opacity: 1;
-    animation: changeImage 5s infinite alternate;
-
-    &:nth-child(1) {
-        animation-delay: 0s;
-    }
-
-    &:nth-child(2) {
-        animation-delay: 5s;
-    }
-
-    &:nth-child(3) {
-        animation-delay: 10s;
-    }
-}
-
-.navbar {
-    background-color: #000000;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
-    .navbar-brand img {
-        max-width: 50px;
-        height: auto;
-    }
-
-    .navbar-nav {
-        justify-content: center;
-
-        .nav-item {
-            margin-right: 20px;
-
-            .nav-link {
-                color: white !important;
-            }
-        }
-    }
 }

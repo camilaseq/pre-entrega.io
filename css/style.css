@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -5,52 +6,54 @@ body {
   background-color: black;
   color: white;
 }
-body header {
+
+header {
   background-color: #000000;
   color: #fff;
   padding: 10px;
   text-align: center;
 }
-body nav {
+
+nav {
   background-color: black;
   padding: 10px;
 }
-body nav ul {
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
 }
-body nav ul li {
+nav ul li {
   margin-right: 20px;
   position: relative;
 }
-body nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: #fff;
   padding: 10px;
   display: block;
 }
-body nav ul li ul {
+nav ul li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #333;
 }
-body nav ul li ul li {
+nav ul li ul li {
   width: 200px;
   float: none;
   display: list-item;
   position: relative;
 }
-body nav ul li ul li ul {
+nav ul li ul li ul {
   position: relative;
   top: -60px;
   left: 200px;
 }
-body nav ul li:hover > ul {
+nav ul li:hover > ul {
   display: inherit;
 }
 
@@ -119,10 +122,12 @@ body nav ul li:hover > ul {
   padding: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .navbar .navbar-brand img {
   max-width: 50px;
   height: auto;
 }
+
 .navbar .navbar-nav {
   justify-content: center;
 }
@@ -131,6 +136,144 @@ body nav ul li:hover > ul {
 }
 .navbar .navbar-nav .nav-item .nav-link {
   color: white !important;
+}
+
+.precios-page header {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.precios-page .container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: black;
+}
+.precios-page #precios h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.precios-page #precios table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.precios-page #precios table th, .precios-page #precios table td {
+  padding: 10px;
+  border: 1px solid white;
+  text-align: left;
+}
+.precios-page #precios table th {
+  background-color: #333;
+  color: rgb(0, 0, 0);
+}
+.precios-page #precios table tr:nth-child(even) {
+  background-color: #000000;
+}
+.precios-page #precios table tr:hover {
+  background-color: #ddd;
+}
+
+.sobrenosotros-page .container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: black;
+}
+.sobrenosotros-page .content {
+  display: flex;
+  align-items: center;
+}
+.sobrenosotros-page .image-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+.sobrenosotros-page .image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.5s ease;
+}
+.sobrenosotros-page .image-container img:hover {
+  transform: scale(1.1);
+}
+.sobrenosotros-page .text {
+  flex: 1;
+}
+.sobrenosotros-page .text h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.sobrenosotros-page .text p {
+  line-height: 1.5;
+}
+
+.salones-page .container .img {
+  width: 200px; /* Ancho deseado para el logo */
+  height: 100px; /* Altura deseada para el logo */
+  display: block; /* Hacer que el logo sea un elemento de bloque */
+  margin: 0 auto; /* Centrar horizontalmente el logo */
+}
+.salones-page .container nav ul {
+  list-style-type: none; /* Quitar viñetas de la lista */
+  margin: 0; /* Quitar márgenes */
+  padding: 0; /* Quitar relleno */
+  text-align: center; /* Centrar los elementos del menú */
+  background-color: #000000; /* Color de fondo del menú */
+  overflow: hidden; /* Evitar que los elementos floten fuera del contenedor */
+}
+.salones-page .container nav ul li {
+  display: inline-block; /* Hacer que los elementos del menú se muestren en línea */
+}
+.salones-page .container nav ul li a {
+  display: block; /* Hacer que los enlaces sean elementos de bloque */
+  color: white; /* Color del texto del menú */
+  padding: 14px 16px; /* Espaciado interno del menú */
+  text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+.salones-page .container #map-container #map .location-info img {
+  width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+  height: auto; /* Se ajusta automáticamente la altura */
+}
+.salones-page .container #map-container #map .location-info p {
+  color: white; /* Color de texto blanco */
+}
+.salones-page header {
+  background-color: transparent; /* Hacer el fondo del encabezado transparente */
+  text-align: center; /* Centrar el contenido del encabezado */
+}
+.salones-page header img {
+  width: 200px; /* Ancho deseado para el logo */
+  height: 100px; /* Altura deseada para el logo */
+  margin-top: 50px; /* Espacio superior para el logo */
+}
+@media (max-width: 768px) {
+  .salones-page body header {
+    padding: 5px;
+  }
+  .salones-page body .container {
+    padding: 10px;
+  }
+  .salones-page body nav {
+    padding: 5px;
+  }
+  .salones-page body nav ul li {
+    margin-right: 10px;
+  }
+  .salones-page body nav ul li .nav-link {
+    padding: 5px;
+  }
+  .salones-page body .text-content h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  .salones-page body .text-content p {
+    font-size: 0.9em;
+    line-height: 1.3;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
