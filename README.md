@@ -1,7 +1,7 @@
 # Entrega final
 # Vipeluquería's - Sitio Web Oficial
 
-Este repositorio contiene el código fuente del sitio web oficial de Vipeluquería's, una cadena de peluquerías líder en Argentina. El sitio web proporciona información sobre los servicios ofrecidos, precios, información sobre la empresa y más.
+Este repositorio contiene el código fuente del sitio web oficial de Vipeluquería's, una cadena de peluquerías líder en Argentina. El sitio web proporciona información sobre los servicios ofrecidos, precios, información sobre la empresa y más. Link a vercel: https://pre-entrega-io.vercel.app/index.html
 
 ## Contenido
 
